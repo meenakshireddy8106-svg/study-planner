@@ -1,12 +1,14 @@
 package com.studyplanner;
 
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController
 @RequestMapping("/api/tasks")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {
+        "http://localhost:5173",
+        "https://study-planner-frontend-qngp.onrender.com"
+})
 public class TaskController {
 
     private final TaskRepository taskRepository;
